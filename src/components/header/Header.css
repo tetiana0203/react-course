@@ -1,0 +1,14 @@
+header{
+    height: 80px;
+    background-color: rgb(131, 169, 101);
+    width: 100%;
+    
+}
+
+.main-menu {
+  padding: 15px;
+  line-height: 2em;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
