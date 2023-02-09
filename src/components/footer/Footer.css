@@ -6,3 +6,8 @@ footer{
     height: 80px;
     clear: both;
 }
+
+.footer-content{
+    padding: 15px;
+    line-height: 2em;
+}

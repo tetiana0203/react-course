@@ -3,7 +3,7 @@ import "./Footer.css";
 class Footer extends Component {
     render() {
         return <footer className="footer-main">
-            <div>
+            <div className="footer-content">
                 Dnipro 2023
             </div>
         </footer>;
