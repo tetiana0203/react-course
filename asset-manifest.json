@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/tatiana0203/react-course/static/css/main.329f08cf.css",
-    "main.js": "/tatiana0203/react-course/static/js/main.9b907933.js",
-    "static/js/787.2fe5556a.chunk.js": "/tatiana0203/react-course/static/js/787.2fe5556a.chunk.js",
-    "index.html": "/tatiana0203/react-course/index.html",
-    "main.329f08cf.css.map": "/tatiana0203/react-course/static/css/main.329f08cf.css.map",
-    "main.9b907933.js.map": "/tatiana0203/react-course/static/js/main.9b907933.js.map",
-    "787.2fe5556a.chunk.js.map": "/tatiana0203/react-course/static/js/787.2fe5556a.chunk.js.map"
+    "main.css": "/react-course/static/css/main.329f08cf.css",
+    "main.js": "/react-course/static/js/main.7ff9e97a.js",
+    "static/js/787.2fe5556a.chunk.js": "/react-course/static/js/787.2fe5556a.chunk.js",
+    "index.html": "/react-course/index.html",
+    "main.329f08cf.css.map": "/react-course/static/css/main.329f08cf.css.map",
+    "main.7ff9e97a.js.map": "/react-course/static/js/main.7ff9e97a.js.map",
+    "787.2fe5556a.chunk.js.map": "/react-course/static/js/787.2fe5556a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.329f08cf.css",
-    "static/js/main.9b907933.js"
+    "static/js/main.7ff9e97a.js"
   ]
 }
