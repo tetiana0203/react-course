@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-class todoList extends Component {
+
+class TodoList extends Component {
   state = {
     defaultValue: "",
     value: this.props.addTodoValue,
@@ -41,4 +42,5 @@ class todoList extends Component {
     );
   }
 }
-export default todoList;
+
+export default TodoList;
