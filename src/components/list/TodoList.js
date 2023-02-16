@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import Todo from "./Todo";
 import AddTodo from "./AddTodo";
 import "./TodoList.css";
-class todoList extends Component {
+
+class TodoList extends Component {
   state = {
     addTodoValue: "",
     todoList: [
@@ -23,17 +24,18 @@ class todoList extends Component {
       },
     ],
   };
+
   getTime() {
     let d = new Date();
     var n = d.getTime();
     console.log(n);
+
     return n;
   }
-  handleDelete = (todo) => {
-    const todoList = this.state.todoList.filter((t) => {
-      return t.id !== todo;
-    });
-    this.setState({ todoList });
+
+  handleDelete = (id) => {
+    const filteredList = this.state.todoList.filter((t) => t.id !== id);
+    this.setState({ todoList : filteredList });
   };
 
   handleDone = (todo) => {
@@ -49,13 +51,12 @@ class todoList extends Component {
 
   addNewTodo = (value) => {
     if (value) {
-      const todoList = [...this.state.todoList];
-      todoList.push({
-        id: this.getTime(),
+      this.setState({ addTodoValue: "", todoList:[...this.state.todoList, 
+        {
+        id:this.getTime(),
         title: value,
-        done: false,
-      });
-      this.setState({ addTodoValue: "", todoList });
+        done: false
+      }]});
     } else {
       alert("Please Add Todo Text");
     }
@@ -63,24 +64,21 @@ class todoList extends Component {
 
   render() {
     return (
-      <div class="todo-main card px-3 col-md-8">
+      <div className="todo-main card px-3 col-md-8">
         <div className="card-body">
           <h3>ToDo List</h3>
           <AddTodo
-            fooAddTodo={this.addNewTodo}
-            addTodoValue={this.state.addTodoValue}
+            addTodo={this.addNewTodo}
+            addValue={this.state.addTodoValue}
           />
-          <div class="list-wrapper">
+          <div className="list-wrapper">
             <div className="d-flex flex-column todo-list">
-              {this.state.todoList.map((todo, index) => (
-                <div key={todo.id}>
+              {this.state.todoList.map((todo) => (
                   <Todo
-                    index={index + 1}
                     todo={todo}
-                    fooDelete={this.handleDelete}
-                    fooDoneDone={this.handleDone}
+                    delete={this.handleDelete}
+                    doneDone={this.handleDone}
                   />
-                </div>
               ))}
             </div>
           </div>
@@ -90,4 +88,4 @@ class todoList extends Component {
   }
 }
 
-export default todoList;
+export default TodoList;

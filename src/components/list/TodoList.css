@@ -16,3 +16,11 @@
 .item-text-b{
     width: 100%;
 }
+
+.completed{
+    text-decoration: line-through;
+}
+
+.uncompleted{
+    text-decoration: none;
+}

@@ -11,14 +11,9 @@ class todoList extends Component {
     });
   };
 
-  clearInput = () => {
-    document.getElementById("todoValue").value = "";
-    this.setState({ value: "" });
-  };
 
   addTodo = () => {
-    this.props.fooAddTodo(this.state.value);
-    this.clearInput();
+    this.props.addTodo(this.state.value);
   };
 
   render() {
