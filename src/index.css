@@ -3,6 +3,8 @@
   text-align: center;
   position: relative;
   height: 100vh;
+
+  margin: 20px;
 }
 
 code {
@@ -14,52 +16,18 @@ code {
   box-sizing: border-box;
 }
 
-
-html, body {
-  height: 100%;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  font-size: 30px;
 }
 
 body {
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-  font-size: 25px;
-}
-
-img, picture, video, canvas, svg {
-  display: block;
-  max-width: 100%;
-}
-
-input, button, textarea, select {
-  font: inherit;
-}
-
-a:active, /* активная/посещенная ссылка */
-a:hover,  /* при наведении */
-a {
-  text-decoration: none;
-  color: #000000;
-}
-
-ul{
-  list-style: none;
-  padding: 0;
-}
-
-p, h1, h2, h3, h4, h5, h6 {
-  overflow-wrap: break-word;
-}
-
-#root, #__next {
-  isolation: isolate;
-}
-/*
-.container{
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 1200px;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  background: linear-gradient(18deg, rgb(17, 200, 220), rgb(90, 67, 121));
+  height: 100vh;
   width: 100%;
-}*/
-
+  display: flex;
+  justify-content: center;
+}

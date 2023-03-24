@@ -1,18 +1,19 @@
-import React from "react";
-import Header from "./components/header/Header";
-import Main from "./components/main/Main";
-import Sidebar from "./components/sidebar/Sidebar";
-import Footer from "./components/footer/Footer";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+import { todoApp } from './components/reducers/reducers';
+import TodoList from './components/TodoList/TodoList';
 
-function App() {
+const App = () => {
+  const store = createStore(todoApp);
   return (
     <div className="App">
-      <Header />
-      <Sidebar />
-      <Main />
-      <Footer />
+      <Provider store={store}>
+        <TodoList />
+      </Provider>
     </div>
   );
-}
+};
 
 export default App;

@@ -1,0 +1,37 @@
+.theTask {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+    background: #f4f4f4;
+    border-radius: 0.5rem;
+  }
+  .theTask li,
+  .theTask button {
+    padding: 0.5rem;
+    background: #f4f4f4;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+  }
+  .theTask .taskText {
+    flex: 1;
+  }
+  button {
+    cursor: pointer;
+  }
+  .addTask:hover {
+    color: #5050ff;
+  }
+  .compBtn:hover {
+    color: #50ff50;
+  }
+  .trashBtn:hover {
+    color: #ff5050;
+  }
+  button i {
+    pointer-events: none;
+  }
+  .completed {
+    opacity: 0.6;
+    text-decoration: line-through;
+  }

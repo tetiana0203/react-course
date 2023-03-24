@@ -1,0 +1,21 @@
+ h1 {
+    color: #f4f4f4;
+    font-weight: 800;
+    margin: 50px 0 30px 0;
+  }
+  .inputContents {
+    background: #f4f4f4;
+    border-radius: 0.5rem;
+  }
+  button,
+  .textField {
+    padding: 0.5rem;
+    border: none;
+    background: #f4f4f4;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+  }
+  .textField {
+    width: 650px;
+  }
+  
