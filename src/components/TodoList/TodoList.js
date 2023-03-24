@@ -46,7 +46,7 @@ const TodoList = ({ todoList, onAddTodo, onDeleteTodo, onToggleTodoDone }) => {
 
       <div action="" className="inputContents">
         <input  className="textField" placeholder="Add new todo" type="text" value={todoInput} onChange={handleInputChange} />
-        <button className="addTask" onClick={handleAddTodo}><i class="fas fa-plus-square"></i></button>
+        <button className="addTask" onClick={handleAddTodo}><i className="fas fa-plus-square"></i></button>
       </div>
 
       <ul  className="Tasks">
