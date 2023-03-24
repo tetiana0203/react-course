@@ -1,13 +1,19 @@
 import {useState} from "react";
-import uuid from "react-uuid";
 import { connect } from "react-redux";
-import TodoItem from "../TodoItem/TodoItem";
+
+import uuid from "react-uuid";
+
 import { addTodo, deleteTodo, toggleTodoDone } from "../actions/actions";
+import TodoItem from "../TodoItem/TodoItem";
 
 import "./TodoList.css";
 
+
+
 const TodoList = ({ todoList, onAddTodo, onDeleteTodo, onToggleTodoDone }) => {
+
   const [todoInput, setTodoInput] = useState("");
+
 
   const handleInputChange = (event) => {
     setTodoInput(event.target.value);
@@ -33,9 +39,11 @@ const TodoList = ({ todoList, onAddTodo, onDeleteTodo, onToggleTodoDone }) => {
     onToggleTodoDone(todoId);
   };
 
+  
   return (
-    <div>
+    <>
       <h1>TODO List</h1>
+
       <div action="" className="inputContents">
         <input  className="textField" placeholder="Add new todo" type="text" value={todoInput} onChange={handleInputChange} />
         <button className="addTask" onClick={handleAddTodo}><i class="fas fa-plus-square"></i></button>
@@ -51,9 +59,10 @@ const TodoList = ({ todoList, onAddTodo, onDeleteTodo, onToggleTodoDone }) => {
           />
         ))}
       </ul>
-    </div>
+    </>
   );
 };
+
 
 const mapStateToProps = (state) => {
   return {
@@ -68,4 +77,6 @@ const mapDispatchToProps = (dispatch) => {
     onToggleTodoDone: (todoId) => dispatch(toggleTodoDone(todoId)),
   };
 };
+
+
 export default connect(mapStateToProps, mapDispatchToProps)(TodoList);
